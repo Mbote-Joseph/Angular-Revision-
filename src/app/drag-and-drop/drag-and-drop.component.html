@@ -1,0 +1,12 @@
+<h3>Angular 7 - Drag and Drop Module</h3>
+<div
+cdkDropList
+#personList="cdkDropList"
+[cdkDropListData]="personaldetails"
+[cdkDropListConnectedTo]="[userlist]"
+class="example-list"
+(cdkDropListDropped)="onDrop($event)">
+ <div class="divlayout" *ngFor="let item of persondata; let i = index" >
+ {{item.name}}
+ </div >
+</div>

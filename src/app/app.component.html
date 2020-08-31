@@ -1,0 +1,40 @@
+{{todaydate}}
+<h1>Angular 7 Routing Demo</h1>
+<nav>
+ <a routerLink="/home">Home</a>
+ <a routerLink="/forms">View Form</a>
+ <a routerLink="/reactive">Reactive Form</a>
+ <a routerLink="/draganddrop">Drag & Drop </a>
+ <a routerLink="/contactus">Contact Us </a>
+ 
+</nav>
+
+<div style = "text-align:center; color: blueviolet;">
+  <h1>
+    {{title}}
+  </h1>
+</div>
+<br><br>
+  <div> Months :
+  <select (change) = "changemonths($event)">
+   <option *ngFor = "let i of months">{{i}}</option>
+  </select>
+  
+  <div>
+<br><br>
+    
+    <span *ngIf="isavailable; then condition1 else condition2">Condition is
+      valid.</span>
+      <ng-template #condition1>Condition is valid</ng-template>
+      <ng-template #condition2>Condition is invalid</ng-template>
+    </div>
+  <br><br>
+  <div appChangeText>Text div tag</div>
+
+    <button (click)="myClickFunction($event)">
+      Click Me
+    </button>
+
+
+
+<router-outlet></router-outlet>
